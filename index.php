@@ -1012,59 +1012,7 @@
       </section>
    </main>
    <?php include 'common/footer.php'; ?>
-   <script>
-      $(document).ready(function() {
-         $('#contactForm').on('submit', function(e) {
-            e.preventDefault();
-            $('.is-invalid').removeClass('is-invalid');
-            $('.alert-message').hide();
-            let formData = $(this).serialize();
-            $('#submitBtn').prop('disabled', true);
-            $('#loading').show();
-            $.ajax({
-               url: 'send_email.php',
-               type: 'POST',
-               data: formData,
-               dataType: 'json',
-               success: function(response) {
-                  $('#loading').hide();
-                  $('#submitBtn').prop('disabled', false);
-                  if (response.success) {
-                     $('#successAlert').show();
-                     $('#contactForm')[0].reset();
-                     setTimeout(function() {
-                        $('#successAlert').hide();
-                     }, 5000);
-                  } else {
-                     $('#errorMessage').text(response.message);
-                     $('#errorAlert').show();
-                     setTimeout(function() {
-                        $('#errorAlert').hide();
-                     }, 5000);
-                  }
-               },
-               error: function(xhr, status, error) {
-                  $('#loading').hide();
-                  $('#submitBtn').prop('disabled', false);
-                  $('#errorMessage').text('An error occurred. Please try again.');
-                  $('#errorAlert').show();
-
-                  setTimeout(function() {
-                     $('#errorAlert').hide();
-                  }, 5000);
-               }
-            });
-         });
-         $('#contactForm input, #contactForm textarea').on('input', function() {
-            if ($(this).val()) {
-               $(this).removeClass('is-invalid');
-               $(this).addClass('is-valid');
-            } else {
-               $(this).removeClass('is-valid');
-            }
-         });
-      });
-   </script>
+   
 </body>
 
 </html>

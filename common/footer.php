@@ -79,7 +79,9 @@
    
   <!-- Vendor JS Files -->
   <script type="text/javascript" src="assets/vendor/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script type="text/javascript" src="assets/js/custom.js"></script>
+  <script type="text/javascript" src="assets/js/cresent-villa.js"></script>
   <!--script type="text/javascript" src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
   <script type="text/javascript" src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>

@@ -1,5 +1,7 @@
 var $ = jQuery.noConflict();
 $(document).ready(function() {
+
+  
 function callAll(jsfiles) {
     var src = document.createElement("script");
     src.setAttribute("type", "text/javascript");
